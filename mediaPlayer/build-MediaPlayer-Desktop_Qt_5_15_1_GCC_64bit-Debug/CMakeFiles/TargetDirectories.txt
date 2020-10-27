@@ -1,0 +1,4 @@
+/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/build-MediaPlayer-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/build-MediaPlayer-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/build-MediaPlayer-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/MediaPlayer.dir
+/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/build-MediaPlayer-Desktop_Qt_5_15_1_GCC_64bit-Debug/CMakeFiles/MediaPlayer_autogen.dir

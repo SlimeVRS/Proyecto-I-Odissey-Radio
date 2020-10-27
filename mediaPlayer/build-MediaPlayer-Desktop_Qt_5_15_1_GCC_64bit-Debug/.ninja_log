@@ -1,0 +1,44 @@
+# ninja log v5
+1	108	1603763526154178011	MediaPlayer_autogen/timestamp	219d943c8713aa8e
+1	6	1603768430973979602	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603768430973979602	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1147	1603768434658059669	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+112	1334	1603763527377808795	CMakeFiles/MediaPlayer.dir/MediaPlayer_autogen/mocs_compilation.cpp.o	5725dffd1d887b06
+1373	1618	1603763527661723326	MediaPlayer	f6a3821b9ccff61b
+111	1373	1603763527417796757	CMakeFiles/MediaPlayer.dir/main.cpp.o	a0ef98bb0c5819ef
+2	6	1603768551584582502	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+2	6	1603768551584582502	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+7	1162	1603768553196617055	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	7	1603769600325692558	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	7	1603769600325692558	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+7	1156	1603769604369433395	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+0	5	1603769918495192189	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+0	5	1603769918495192189	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+5	1201	1603769919711155426	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	6	1603770061355586295	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603770061355586295	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1203	1603770062575561148	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	5	1603770502462828718	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	5	1603770502462828718	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+5	1184	1603770503662824686	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	6	1603770727106611112	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603770727106611112	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+7	1165	1603770728290612440	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1165	1414	1603770728534612716	MediaPlayer	f6a3821b9ccff61b
+1	6	1603770758262653272	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603770758262653272	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1143	1603770759418655122	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	6	1603770902035023146	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603770902035023146	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+1	6	1603770912503060048	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603770912503060048	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1149	1603770913671064241	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	6	1603772680140509813	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603772680140509813	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+7	1174	1603772690280696063	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+2	6	1603772937293006898	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+2	6	1603772937293006898	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1163	1603772940497060407	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
+1	6	1603773624970905271	/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/mediaPlayer/MediaPlayer/MediaPlayer_es_CR.ts	5678a3a2337826e0
+1	6	1603773624970905271	CMakeFiles/MediaPlayer_es_CR.ts_lst_file	5678a3a2337826e0
+6	1195	1603773626182882597	CMakeFiles/MediaPlayer.dir/dialog.cpp.o	f77defc59fc710f3
