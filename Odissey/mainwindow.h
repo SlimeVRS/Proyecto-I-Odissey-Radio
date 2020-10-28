@@ -16,7 +16,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    void add_root(QString nombre,QString Artista,QString largo,QString Genero);
+    void add_song(QString nombre,QString Artista,QString largo,QString Genero);
     void add_child(QTreeWidgetItem *parent,QString name);
 
 public:

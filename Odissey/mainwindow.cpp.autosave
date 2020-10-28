@@ -26,6 +26,7 @@ void MainWindow::add_song(QString nombre,QString Artista,QString largo,QString G
     item->setText(1,Artista);
     item->setText(2,largo);
     item->setText(3,Genero);
+    
 
 }
 
