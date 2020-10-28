@@ -17,9 +17,9 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>185</x>
+      <x>195</x>
       <y>460</y>
-      <width>671</width>
+      <width>661</width>
       <height>72</height>
      </rect>
     </property>
@@ -76,28 +76,63 @@
      </item>
     </layout>
    </widget>
-   <widget class="QScrollArea" name="scrollArea">
+   <widget class="QTreeWidget" name="treeWidget">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>30</y>
-      <width>671</width>
-      <height>411</height>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>441</height>
      </rect>
     </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>669</width>
-       <height>409</height>
-      </rect>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
      </property>
-    </widget>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cargar carpeta</string>
+    </property>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>661</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Nombre</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Artista</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Largo</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Genero</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
