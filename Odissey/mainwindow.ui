@@ -87,11 +87,11 @@
     </property>
     <column>
      <property name="text">
-      <string notr="true">1</string>
+      <string notr="true">Libreria</string>
      </property>
     </column>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="loadButton">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -104,7 +104,7 @@
      <string>Cargar carpeta</string>
     </property>
    </widget>
-   <widget class="QTreeWidget" name="treeWidget_2">
+   <widget class="QTreeWidget" name="informacion">
     <property name="geometry">
      <rect>
       <x>190</x>

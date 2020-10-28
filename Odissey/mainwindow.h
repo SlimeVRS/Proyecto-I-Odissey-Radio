@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QMediaPlayer>
 #include <QtDebug>
+#include <QtCore>
+#include <QtGui>
+#include <QTreeWidgetItem>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,6 +15,9 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
+    void add_root(QString nombre,QString Artista,QString largo,QString Genero);
+    void add_child(QTreeWidgetItem *parent,QString name);
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -31,5 +37,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QMediaPlayer* player;
+
 };
 #endif // MAINWINDOW_H
