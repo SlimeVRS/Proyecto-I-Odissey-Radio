@@ -88,8 +88,8 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     return result;
 }
 
-LinkedList<Track> *Pagiancion(LinkedList<Track> list){
-
+LinkedList<Track> *Pagiancion(LinkedList<Track> *list){
+    
 }
 
 #endif //LISTCREATOR_H

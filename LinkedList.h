@@ -139,7 +139,7 @@ public:
 
         int pos = 1;
 
-        of(index == 0){
+        if(index == 0){
             this->head = head->getNext();
             this->size--;
             return;
@@ -175,7 +175,7 @@ public:
             if(node == nextPtr){
                 currentPtr->setNext(nextPtr->getNext());
                 this->size--;
-                return
+                return;
             }
 
             currentPtr = currentPtr->getNext();
