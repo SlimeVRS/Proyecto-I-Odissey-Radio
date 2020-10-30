@@ -1,3 +1,10 @@
+/**
+ * @author Marco Rivera Serrano
+ * @date 24/10/2020
+ * @file LinkedList.h
+ * @brief Node class and their methods
+ */
+
 #include <iostream>
 
 template <typename T>
@@ -7,24 +14,41 @@ class NodeLL{
     NodeLL *nextNode;
 
 public:
+    /**
+     * @brief NodeLL Add information to the node
+     * @param data Information to add
+     * @return Returns the node with the information added
+     */
     NodeLL(T *data){
         this->data = data;
     }
-
+    /**
+     * @brief Node destroyer
+     * @return Node deleted
+     */
     ~NodeLL(){
         delete data;
         delete nextNode;
         delete this;
     }
-
+    /**
+     * @brief Gives the node's information
+     * @return Node information
+     */
     T *getData(){
         return this->data;
     }
-
+    /**
+     * @brief Gets the next node
+     * @return Next node
+     */
     NodeLL *getNext(){
         return this->nextNode;
     }
-
+    /**
+     * @brief Change the next node of the current node
+     * @param element Node to point 
+     */
     void setNext(NodeLL *element){
         this->nextNode = element;
     }
@@ -37,16 +61,29 @@ class LinkedList{
     int size;
 
 public:
+    /**
+     * @brief Creates a new linked list with head pointing
+     * at null and size 0
+     * @return New empty linked list
+     */
     LinkedList(){
         this->head = nullptr;
         this->size = 0;
     }
-
+    /**
+     * @brief Linked list destroyer
+     */
     ~LinkedList(){
         delete head;
         delete this;
     }
 
+    /**
+     * @brief Insert new node to the linked list, if the list is empty, the node is added at the head,
+     * if not, it goes at the end of the list
+     * @param data New node to add
+     * @return Node added in the list
+     */
     void insterElement(T *data){
         NodeLL<T> *newNode = new NodeLL<T>(data);
         NodeLL<T> *tempPtr = this->head;
@@ -68,6 +105,10 @@ public:
         return;
     }
 
+    /**
+     * @brief Says if the node is or not in the list
+     * @return True or false
+     */
     bool contains(T *data){
         NodeLL<T> *tempPtr = head;
         while(tempPtr != nullptr){
@@ -79,10 +120,19 @@ public:
         return false;
     }
 
+    /**
+     * @brief Returns the head of the list
+     * @returns The first element
+     */ 
     NodeLL<T> *getFirst(){
         return this->head;
     }
 
+    /**
+     * @brief Delets a node on the list
+     * @param index Position of the node to delete
+     * @return The list without the node
+     */ 
     void remove(int index){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
@@ -107,6 +157,11 @@ public:
         }
     }
 
+    /**
+     * @brief Deletes a node on the list
+     * @param node Node to delete
+     * @returns The list without the node
+     */ 
     void remove(T *node){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
