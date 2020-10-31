@@ -16,14 +16,17 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-    void add_song(QString nombre,QString Artista,QString largo,QString Genero);
-    void add_child(QTreeWidgetItem *parent,QString name);
+    void add_song(QString ID,QString nombre,QString Artista,QString Album,QString Genero,QString largo);
+
 
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
+
+    void play_song(QString cancion);
+
     void on_playButton_clicked();
 
     void on_pauseButton_clicked();
