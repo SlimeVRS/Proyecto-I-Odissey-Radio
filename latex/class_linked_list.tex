@@ -1,0 +1,153 @@
+\hypertarget{class_linked_list}{}\doxysection{Linked\+List$<$ T $>$ Class Template Reference}
+\label{class_linked_list}\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Linked\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_linked_list_a3c20fcfec867e867f541061a09fc640c}{Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new linked list with head pointing at null and size 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}{$\sim$\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Linked list destroyer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a7cc5a99d428d0218abeff002722a26a1}{inster\+Element}} (T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Insert new node to the linked list, if the list is empty, the node is added at the head, if not, it goes at the end of the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_linked_list_a2180ea805b93ed7b1f5549dd9e497dac}{contains}} (T $\ast$data)
+\begin{DoxyCompactList}\small\item\em Says if the node is or not in the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_node_l_l}{Node\+LL}}$<$ T $>$ $\ast$ \mbox{\hyperlink{class_linked_list_adb016d94566325b3ced38ac3c650bb46}{get\+First}} ()
+\begin{DoxyCompactList}\small\item\em Returns the head of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a8a6f5190222bd179daeb7cc548d36a29}{remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Delets a node on the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_linked_list_a9f5343670745f8cd7b7dfb65eab7865d}{remove}} (T $\ast$node)
+\begin{DoxyCompactList}\small\item\em Deletes a node on the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}{get\+Size}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_linked_list_a3c20fcfec867e867f541061a09fc640c}\label{class_linked_list_a3c20fcfec867e867f541061a09fc640c}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!LinkedList@{LinkedList}}
+\index{LinkedList@{LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LinkedList()}{LinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::\mbox{\hyperlink{class_linked_list}{Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new linked list with head pointing at null and size 0. 
+
+\begin{DoxyReturn}{Returns}
+New empty linked list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}\label{class_linked_list_a7c37609df3b83bc4eb0281b852f93fd7}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!````~LinkedList@{$\sim$LinkedList}}
+\index{````~LinkedList@{$\sim$LinkedList}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$LinkedList()}{~LinkedList()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_linked_list}{Linked\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Linked list destroyer. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_linked_list_a2180ea805b93ed7b1f5549dd9e497dac}\label{class_linked_list_a2180ea805b93ed7b1f5549dd9e497dac}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!contains@{contains}}
+\index{contains@{contains}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::contains (\begin{DoxyParamCaption}\item[{T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Says if the node is or not in the list. 
+
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_adb016d94566325b3ced38ac3c650bb46}\label{class_linked_list_adb016d94566325b3ced38ac3c650bb46}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getFirst@{getFirst}}
+\index{getFirst@{getFirst}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFirst()}{getFirst()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_node_l_l}{Node\+LL}}$<$T$>$$\ast$ \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the head of the list. 
+
+\begin{DoxyReturn}{Returns}
+The first element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}\label{class_linked_list_ab56d59b74c8d24cd223a4a49a2b5cfb1}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_linked_list_a7cc5a99d428d0218abeff002722a26a1}\label{class_linked_list_a7cc5a99d428d0218abeff002722a26a1}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!insterElement@{insterElement}}
+\index{insterElement@{insterElement}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insterElement()}{insterElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::inster\+Element (\begin{DoxyParamCaption}\item[{T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert new node to the linked list, if the list is empty, the node is added at the head, if not, it goes at the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & New node to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node added in the list 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a8a6f5190222bd179daeb7cc548d36a29}\label{class_linked_list_a8a6f5190222bd179daeb7cc548d36a29}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delets a node on the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of the node to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list without the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_linked_list_a9f5343670745f8cd7b7dfb65eab7865d}\label{class_linked_list_a9f5343670745f8cd7b7dfb65eab7865d}} 
+\index{LinkedList$<$ T $>$@{LinkedList$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!LinkedList$<$ T $>$@{LinkedList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a node on the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Node to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The list without the node 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_linked_list_8h}{Linked\+List.\+h}}\end{DoxyCompactItemize}
