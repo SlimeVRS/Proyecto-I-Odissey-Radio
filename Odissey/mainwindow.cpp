@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
+#include <iostream>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -9,10 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
     player = new QMediaPlayer(this);
     connect(player, &QMediaPlayer::positionChanged,this, &MainWindow::on_progress_changed);
     //ui->treeWidget->setColumnCount(2);
-    for(int i=0;i<30;i++){
-        add_song("Maradona es mas grande que pele", "world","20","10");
-
-    }
+    add_song("Maradona es mas grande que pele", "world","20","10");
+    add_song("Malpino", "pele","20","10");
+    add_song("Holis", "papa","20","10");
+    add_song("Estoy mamadisimo ", "mama","20","10");
+    add_song("probando", "tata ","20","10");
+    add_song("oh yeah", "papa","20","10");
+    add_song("si pa", "holi","20","10");
 }
 
 MainWindow::~MainWindow()
@@ -26,6 +32,9 @@ void MainWindow::add_song(QString nombre,QString Artista,QString largo,QString G
     item->setText(1,Artista);
     item->setText(2,largo);
     item->setText(3,Genero);
+    //ui->informacion->clear();
+    //QString oli = ui->informacion[0].textElideMode();
+
 
 }
 
@@ -59,4 +68,19 @@ void MainWindow::on_progress_sliderMoved(int position)
 void MainWindow::on_progress_changed(qint64 position)
 {
     ui->progress->setValue(position);
+}
+
+void MainWindow::on_informacion_doubleClicked(const QModelIndex &index)
+{
+   // QMessageBox::critical(this,"0",QString::informacion(index));
+
+}
+
+void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column)
+{
+    QString str;
+    str = item->text(0);
+    str+=" ";
+    str+= item->text(1);
+    qDebug()<< str;
 }

@@ -34,6 +34,12 @@ private slots:
 
     void on_progress_changed(qint64 position);
 
+    void on_informacion_doubleClicked(const QModelIndex &index);
+
+    void on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+
+
 private:
     Ui::MainWindow *ui;
     QMediaPlayer* player;
