@@ -3,7 +3,9 @@
 #include <QMessageBox>
 #include <iostream>
 #include <QDebug>
-QString archivo=".../Odissey/Canciones/fma_small/";
+#include "../ListCreator.h"
+#include "../tracks.cpp"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
