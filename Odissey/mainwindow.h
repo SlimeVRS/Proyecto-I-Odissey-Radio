@@ -25,7 +25,7 @@ public:
 
 private slots:
 
-    void play_song(QString cancion);
+    void play_song(QString ID);
 
     void on_playButton_clicked();
 

@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <iostream>
 #include <QDebug>
-QString archivo="/home/drump1/Desktop/";
+QString archivo=".../Odissey/Canciones/fma_small/";
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(player, &QMediaPlayer::positionChanged,this, &MainWindow::on_progress_changed);
     //ui->treeWidget->setColumnCount(2);
-    add_song("01","Maradona es mas grande que pele","Mama", "world","POP","1:35");
+    add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
     //add_song("Malpino", "pele","20","10");
     //add_song("Holis", "papa","20","10");
     //add_song("Estoy mamadisimo ", "mama","20","10");
@@ -41,10 +41,16 @@ void MainWindow::add_song(QString id,QString nombre,QString Artista,QString Albu
 
 }
 
-void MainWindow::play_song(QString cancion){
+void MainWindow::play_song(QString ID){
     try {
-        player->setMedia(QUrl::fromLocalFile(cancion));
+        QString carpeta=ID;
+        QString path=QDir::homePath();
+        path+="/fma_small/";
+        path+=carpeta.remove(3,5);
+        path+="/"+ID+".mp3";
+        player->setMedia(QUrl::fromLocalFile(path));
         player->play();
+        //ui->statusbar->showMessage(path);
         qDebug() << player-> errorString();
 
     }  catch (...) {
@@ -94,9 +100,10 @@ void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int col
         ui->statusbar->showMessage("Now playing: "+ item->text(1)+",  "+item->text(2)+", "+item->text(3));
 
         //cargar archivo
-        play_song(archivo+"Anuel AA - Keii [Official Video].mp3");
+        play_song(item->text(0));
 
-        //qDebug()<< 123456/1000;
+
+        //qDebug()<< (a[0]);
 
     }  catch (...) {
 
