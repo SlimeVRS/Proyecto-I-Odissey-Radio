@@ -85,8 +85,20 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     return result;
 }
 
-LinkedList<std::string> *ArtistList(LinkedList<Track> *list){
-
+LinkedList<Track> *ArtistList(LinkedList<Track> *list){
+    LinkedList<Track> *Artists = new LinkedList<Track>();
+    NodeLL<Track> *current = list->getFirst();
+    while(current != nullptr){
+        NodeLL<Track> *Aux = Artists->getFirst();
+        while(Aux != nullptr){
+            if(Aux->getData()->getArtist() == current->getData()->getArtist()){
+                Aux = Aux->getNext();
+            }
+        }
+        Artists->insterElement(Aux->getData());
+        current = current->getNext();
+    }
+    return Artists;
 }
 
 #endif //LISTCREATOR_H
