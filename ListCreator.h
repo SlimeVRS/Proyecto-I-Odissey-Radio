@@ -19,7 +19,7 @@
 /**
  * @brief This methods gives a linked list with all the rows in the csv file.
  * @return A linked list with the songs in the csv file.
- */ 
+ */
 LinkedList<Track> *readSmallMetadata(){
     LinkedList<Track> *tracks = new LinkedList<Track>();    // Final list
     std::string SmallMeta;
@@ -68,17 +68,14 @@ LinkedList<Track> *readSmallMetadata(){
             }
         }
     }
-    tracks->removeI(0);                                      // Removes the header of the list
+    tracks->remove(0);                                      // Removes the header of the list
     return tracks;
 }
-
-
-
 LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result){
     NodeLL<Track> *current = result->getFirst();
     while(current->getNext() != nullptr){
         if(current->getData()->getArtist() != artist){
-            result->removeN(current->getData());
+            result->remove(current);
             current = current->getNext();
         }
         else{
@@ -88,8 +85,8 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     return result;
 }
 
-LinkedList<Track> *Pagiancion(LinkedList<Track> *list){
-    
+LinkedList<std::string> *ArtistList(LinkedList<Track> *list){
+
 }
 
 #endif //LISTCREATOR_H

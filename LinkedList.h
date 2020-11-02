@@ -47,7 +47,7 @@ public:
     }
     /**
      * @brief Change the next node of the current node
-     * @param element Node to point 
+     * @param element Node to point
      */
     void setNext(NodeLL *element){
         this->nextNode = element;
@@ -97,7 +97,7 @@ public:
         }
 
         while(tempPtr->getNext() != nullptr){
-            tempPtr = tempPtr->getData();
+            tempPtr = tempPtr->getNext();
         }
 
         tempPtr->setNext(newNode);
@@ -123,7 +123,7 @@ public:
     /**
      * @brief Returns the head of the list
      * @returns The first element
-     */ 
+     */
     NodeLL<T> *getFirst(){
         return this->head;
     }
@@ -132,8 +132,8 @@ public:
      * @brief Delets a node on the list
      * @param index Position of the node to delete
      * @return The list without the node
-     */ 
-    void removeI(int index){
+     */
+    void remove(int index){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
 
@@ -161,8 +161,8 @@ public:
      * @brief Deletes a node on the list
      * @param node Node to delete
      * @returns The list without the node
-     */ 
-    void removeN(T *node){
+     */
+    void remove(NodeLL<T> *node){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
 
@@ -185,7 +185,7 @@ public:
     /**
      * @brief Gives the size of the list
      * @return Size of the list
-     */ 
+     */
     int getSize(){
         return this->size;
     }
