@@ -45,21 +45,16 @@ void MainWindow::add_song(QString id,QString nombre,QString Artista,QString Albu
 }
 
 void MainWindow::play_song(QString ID){
-    try {
-        QString carpeta=ID;
-        QString path=QDir::homePath();
-        path+="/fma_small/";
-        path+=carpeta.remove(3,5);
-        path+="/"+ID+".mp3";
-        player->setMedia(QUrl::fromLocalFile(path));
-        player->play();
-        //ui->statusbar->showMessage(path);
-        qDebug() << player-> errorString();
 
-    }  catch (...) {
-        ui->statusbar->showMessage("file not found");
-    }
-
+    QString carpeta=ID;
+    QString path=QDir::homePath();
+    path+="/fma_small/";
+    path+=carpeta.remove(3,5);
+    path+="/"+ID+".mp3";
+    player->setMedia(QUrl::fromLocalFile(path));
+    player->play();
+    //ui->statusbar->showMessage(path);
+    qDebug() << player-> errorString();
 
 }
 
@@ -98,21 +93,13 @@ void MainWindow::on_informacion_doubleClicked(const QModelIndex &index)
 
 void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {
-    try {
 
-        ui->statusbar->showMessage("Now playing: "+ item->text(1)+",  "+item->text(2)+", "+item->text(3));
+    ui->statusbar->showMessage("Now playing: "+ item->text(1)+",  "+item->text(2)+", "+item->text(3));
 
-        //cargar archivo
-        play_song(item->text(0));
+    //cargar archivo
+    play_song(item->text(0));
 
 
-        //qDebug()<< (a[0]);
-
-    }  catch (...) {
-
-        ui->statusbar->showMessage("file not found");
-
-    }
 
 }
 
@@ -121,12 +108,10 @@ void MainWindow::on_loadButton_clicked()
    readSmallMetadata();
    LinkedList<Track> *list=readSmallMetadata();
    NodeLL<Track> *cancion=list->getFirst();
-   //add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
-   int i=0;
    while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
-                 QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()),QString::fromStdString(track->getLenght()));
+                 QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
 
    }
