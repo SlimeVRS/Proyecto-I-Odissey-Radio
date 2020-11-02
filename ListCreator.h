@@ -23,7 +23,7 @@
 LinkedList<Track> *readSmallMetadata(){
     LinkedList<Track> *tracks = new LinkedList<Track>();    // Final list
     std::string SmallMeta;
-    SmallMeta = "/home/marco/projects/helloworld.csv";      // Directory of the csv file
+    SmallMeta = "/home/drump1/Desktop/proyecto 1/Proyecto-I-Odissey-Radio/SmallMeta.csv";      // Directory of the csv file
     std::ifstream filename(SmallMeta);
     if(!filename.is_open()){                                // Exception if file isn't open
         throw std::runtime_error("Could not open CSV file");
