@@ -123,12 +123,11 @@ void MainWindow::on_loadButton_clicked()
    NodeLL<Track> *cancion=list->getFirst();
    //add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
    int i=0;
-   while(i<100){
+   while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
-        i++;
 
    }
 }
