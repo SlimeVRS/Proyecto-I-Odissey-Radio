@@ -5,6 +5,13 @@
 #include <QDebug>
 #include "../ListCreator.h"
 #include "../tracks.cpp"
+#include <string>
+#include <fstream>
+#include <utility>
+#include <stdexcept>
+#include <sstream>
+#include "../LinkedList.h"
+#include "../tracks.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(player, &QMediaPlayer::positionChanged,this, &MainWindow::on_progress_changed);
     //ui->treeWidget->setColumnCount(2);
-    add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
+    //add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
     //add_song("Malpino", "pele","20","10");
     //add_song("Holis", "papa","20","10");
     //add_song("Estoy mamadisimo ", "mama","20","10");
@@ -113,4 +120,21 @@ void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int col
 
     }
 
+}
+
+void MainWindow::on_loadButton_clicked()
+{
+   readSmallMetadata();
+   //LinkedList<Track> *list=readSmallMetadata();
+   //NodeLL<Track> *cancion=list->getFirst();
+   //add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
+   /*while(cancion!=nullptr){
+       Track *track=cancion->getData();
+
+       //QString::fromStdString(track->getLenght());
+        add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
+                 QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()),QString::fromStdString(track->getLenght()));
+        cancion->getNext();
+
+   }*/
 }

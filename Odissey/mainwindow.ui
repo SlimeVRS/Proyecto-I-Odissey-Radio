@@ -101,7 +101,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Cargar carpeta</string>
+     <string>Cargar Canciones</string>
     </property>
    </widget>
    <widget class="QTreeWidget" name="informacion">
