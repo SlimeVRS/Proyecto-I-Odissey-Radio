@@ -133,7 +133,7 @@ public:
      * @param index Position of the node to delete
      * @return The list without the node
      */
-    void removeI(int index){
+    void remove(int index){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
 
@@ -162,7 +162,7 @@ public:
      * @param node Node to delete
      * @returns The list without the node
      */
-    void removeN(T *node){
+    void remove(NodeLL<T> *node){
         NodeLL<T> *currentPtr = this->head;
         NodeLL<T> *nextPtr = currentPtr->getNext();
 

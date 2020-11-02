@@ -68,14 +68,14 @@ LinkedList<Track> *readSmallMetadata(){
             }
         }
     }
-    tracks->removeI(0);                                      // Removes the header of the list
+    tracks->remove(0);                                      // Removes the header of the list
     return tracks;
 }
 LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result){
     NodeLL<Track> *current = result->getFirst();
     while(current->getNext() != nullptr){
         if(current->getData()->getArtist() != artist){
-            result->removeN(current->getData());
+            result->remove(current);
             current = current->getNext();
         }
         else{
