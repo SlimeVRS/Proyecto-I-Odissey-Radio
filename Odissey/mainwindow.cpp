@@ -5,6 +5,7 @@
 #include <QDebug>
 #include "../ListCreator.h"
 #include "../tracks.cpp"
+#include "../ListCreator.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -41,6 +42,11 @@ void MainWindow::add_song(QString id,QString nombre,QString Artista,QString Albu
     //ui->informacion->clear();
     //QString oli = ui->informacion[0].textElideMode();
 
+
+}
+void MainWindow::add_art(QString art){
+    QTreeWidgetItem *item= new QTreeWidgetItem(ui->treeWidget);
+    item->setText(0,art);
 
 }
 
@@ -105,14 +111,23 @@ void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int col
 
 void MainWindow::on_loadButton_clicked()
 {
-   readSmallMetadata();
    LinkedList<Track> *list=readSmallMetadata();
    NodeLL<Track> *cancion=list->getFirst();
+
    while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
-
    }
+   ArtistList(list);
+   //LinkedList<Track> *artistas= ArtistList(list);
+   //NodeLL<Track> *artista=artistas->getFirst();
+   /*
+   while(artista!=nullptr){
+       Track *trac=artista->getData();
+       add_art(QString::fromStdString(trac->getArtist()));
+       artista=artista->getNext();
+   }*/
+   qDebug()<<player->errorString();
 }

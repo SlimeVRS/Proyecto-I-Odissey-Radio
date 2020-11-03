@@ -17,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
     void add_song(QString ID,QString nombre,QString Artista,QString Album,QString Genero,QString largo);
-
+    void add_art(QString art);
 
 public:
     MainWindow(QWidget *parent = nullptr);
