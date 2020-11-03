@@ -5,7 +5,7 @@
 #include <QDebug>
 #include "../ListCreator.h"
 #include "../tracks.cpp"
-#include "../ListCreator.h"
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -113,13 +113,13 @@ void MainWindow::on_loadButton_clicked()
 {
    LinkedList<Track> *list=readSmallMetadata();
    NodeLL<Track> *cancion=list->getFirst();
-
+   /*
    while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
-   }
+   }*/
    ArtistList(list);
    //LinkedList<Track> *artistas= ArtistList(list);
    //NodeLL<Track> *artista=artistas->getFirst();
@@ -129,5 +129,5 @@ void MainWindow::on_loadButton_clicked()
        add_art(QString::fromStdString(trac->getArtist()));
        artista=artista->getNext();
    }*/
-   qDebug()<<player->errorString();
+
 }
