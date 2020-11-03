@@ -120,7 +120,7 @@ void MainWindow::on_loadButton_clicked()
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
    }*/
-   ArtistList(list);
+   ArtistListRecursive(list);
    //LinkedList<Track> *artistas= ArtistList(list);
    //NodeLL<Track> *artista=artistas->getFirst();
    /*
