@@ -87,15 +87,18 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
 
 LinkedList<Track> *ArtistList(LinkedList<Track> *list){
     LinkedList<Track> *Artists = new LinkedList<Track>();
-    NodeLL<Track> *current = list->getFirst();
+    NodeLL<Track> *current = list->getFirst()->getNext();
+    Artists->insterElement(list->getFirst()->getData());
     while(current != nullptr){
         NodeLL<Track> *Aux = Artists->getFirst();
         while(Aux != nullptr){
             if(Aux->getData()->getArtist() == current->getData()->getArtist()){
+                current = current->getNext();
+            } else {
                 Aux = Aux->getNext();
             }
         }
-        Artists->insterElement(Aux->getData());
+        Artists->insterElement(current->getData());
         current = current->getNext();
     }
     return Artists;
