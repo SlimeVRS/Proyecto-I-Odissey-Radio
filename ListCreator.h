@@ -85,7 +85,7 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     return result;
 }
 
-void *ArtistListRecursive(LinkedList<Track> *list){
+LinkedList<Track> *ArtistListRecursive(LinkedList<Track> *list){
     LinkedList<Track> *Artists = new LinkedList<Track>();
     NodeLL<Track> *current = list->getFirst()->getNext();
     Artists->insterElement(list->getFirst()->getData());
