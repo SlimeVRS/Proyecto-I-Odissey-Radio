@@ -84,14 +84,6 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     }
     return result;
 }
-
-LinkedList<Track> *ArtistListRecursive(LinkedList<Track> *list){
-    LinkedList<Track> *Artists = new LinkedList<Track>();
-    NodeLL<Track> *current = list->getFirst()->getNext();
-    Artists->insterElement(list->getFirst()->getData());
-    ArtistListRecursiveAux(Artists, current);
-}
-
 LinkedList<Track> *ArtistListRecursiveAux(LinkedList<Track> *Artists, NodeLL<Track> *current){
     if(current != nullptr){
         NodeLL<Track> *Aux;
@@ -106,13 +98,22 @@ LinkedList<Track> *ArtistListRecursiveAux(LinkedList<Track> *Artists, NodeLL<Tra
     return Artists;
 }
 
-void *ArtistListRecursive(LinkedList<Track> *list){
+LinkedList<Track> *ArtistListRecursive(LinkedList<Track> *list){
     LinkedList<Track> *Artists = new LinkedList<Track>();
     NodeLL<Track> *current = list->getFirst()->getNext();
     Artists->insterElement(list->getFirst()->getData());
     ArtistListRecursiveAux(Artists, current);
 }
 
+
+/*
+void *ArtistListRecursive(LinkedList<Track> *list){
+    LinkedList<Track> *Artists = new LinkedList<Track>();
+    NodeLL<Track> *current = list->getFirst()->getNext();
+    Artists->insterElement(list->getFirst()->getData());
+    ArtistListRecursiveAux(Artists, current);
+}
+*/
 
 
 /*

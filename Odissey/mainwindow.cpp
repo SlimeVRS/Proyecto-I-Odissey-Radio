@@ -113,21 +113,21 @@ void MainWindow::on_loadButton_clicked()
 {
    LinkedList<Track> *list=readSmallMetadata();
    NodeLL<Track> *cancion=list->getFirst();
-   /*
+
    while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
-   }*/
+   }
    //ArtistListRecursive(list);
    LinkedList<Track> *artistas= ArtistListRecursive(list);
    NodeLL<Track> *artista=artistas->getFirst();
-   /*
+
    while(artista!=nullptr){
        Track *trac=artista->getData();
        add_art(QString::fromStdString(trac->getArtist()));
        artista=artista->getNext();
-   }*/
+   }
 
 }
