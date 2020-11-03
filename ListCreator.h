@@ -85,23 +85,41 @@ LinkedList<Track> *readSmallArtist(std::string artist, LinkedList<Track> *result
     return result;
 }
 
-LinkedList<Track> *ArtistList(LinkedList<Track> *list){
+void *ArtistListRecursive(LinkedList<Track> *list){
     LinkedList<Track> *Artists = new LinkedList<Track>();
     NodeLL<Track> *current = list->getFirst()->getNext();
     Artists->insterElement(list->getFirst()->getData());
-    while(current != nullptr){
-        NodeLL<Track> *Aux = Artists->getFirst();
-        while(Aux != nullptr){
+    ArtistListRecursiveAux(Artists, current);
+}
+
+LinkedList<Track> *ArtistListRecursiveAux(LinkedList<Track> *Artists, NodeLL<Track> *current){
+    if(current != nullptr){
+        NodeLL<Track> *Aux;
+        for(Aux = Artists->getFirst(); Aux != nullptr; Aux = Aux->getNext()){
+            if(Aux->getData()->getArtist() == current->getData()->getArtist()){
+                return ArtistListRecursiveAux(Artists, current->getNext());
+            }
+        }
+        Artists->insterElement(current->getData());
+        return ArtistListRecursiveAux(Artists, current->getNext());
+    }
+    return Artists;
+}
+
+/*
+LinkedList<Track> *ArtistList(LinkedList<Track> *list){
+    LinkedList<Track> *Artists = new LinkedList<Track>();
+    NodeLL<Track> *current;
+    Artists->insterElement(list->getFirst()->getData());
+    for(current = list->getFirst()->getNext(); current != nullptr; current = current->getNext()){
+        NodeLL<Track> *Aux;
+        for(Aux = Artists->getFirst(); Aux != nullptr; Aux = Aux->getNext()){
             if(Aux->getData()->getArtist() == current->getData()->getArtist()){
                 current = current->getNext();
             } else {
                 Aux = Aux->getNext();
             }
         }
-        Artists->insterElement(current->getData());
-        current = current->getNext();
     }
-    return Artists;
-}
-
+}*/
 #endif //LISTCREATOR_H
