@@ -31,8 +31,6 @@ private slots:
 
     void on_pauseButton_clicked();
 
-    void on_pagButton_clicked();
-
     void on_progress_sliderMoved(int position);
 
     void on_progress_changed(qint64 position);

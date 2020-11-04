@@ -78,10 +78,6 @@ void MainWindow::on_pauseButton_clicked()
     player->pause();
 }
 
-void MainWindow::on_pagButton_clicked()
-{
-
-}
 
 void MainWindow::on_progress_sliderMoved(int position)
 {
