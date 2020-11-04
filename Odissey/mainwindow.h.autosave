@@ -41,7 +41,7 @@ private slots:
 
     void on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
-
+    void on_durationChenged(qint64 position);
 
     void on_loadButton_clicked();
 

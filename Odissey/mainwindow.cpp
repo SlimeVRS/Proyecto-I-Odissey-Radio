@@ -16,14 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     player = new QMediaPlayer(this);
 
     connect(player, &QMediaPlayer::positionChanged,this, &MainWindow::on_progress_changed);
-    //ui->treeWidget->setColumnCount(2);
-    //add_song("000002","Maradona es mas grande que pele","Mama", "world","POP","1:35");
-    //add_song("Malpino", "pele","20","10");
-    //add_song("Holis", "papa","20","10");
-    //add_song("Estoy mamadisimo ", "mama","20","10");
-    //add_song("probando", "tata ","20","10");
-    //add_song("oh yeah", "papa","20","10");
-    //add_song("si pa", "holi","20","10");
+    connect(player,&QMediaPlayer::durationChanged,this,&MainWindow::on_durationChenged);
 }
 
 MainWindow::~MainWindow()
@@ -50,6 +43,17 @@ void MainWindow::add_art(QString art){
 
 }
 
+
+void MainWindow::on_progress_changed(qint64 position)
+{
+    ui->progress->setValue(position);
+}
+
+void on_durationChenged(qint64 position)
+{
+
+}
+
 void MainWindow::play_song(QString ID){
 
     QString carpeta=ID;
@@ -69,8 +73,6 @@ void MainWindow::on_playButton_clicked()
     player->play();
 }
 
-
-
 void MainWindow::on_pauseButton_clicked()
 {
     player->pause();
@@ -86,10 +88,6 @@ void MainWindow::on_progress_sliderMoved(int position)
     player->setPosition(position);
 }
 
-void MainWindow::on_progress_changed(qint64 position)
-{
-    ui->progress->setValue(position);
-}
 
 void MainWindow::on_informacion_doubleClicked(const QModelIndex &index)
 {
@@ -111,16 +109,17 @@ void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int col
 
 void MainWindow::on_loadButton_clicked()
 {
+   add_art("Todos");
    LinkedList<Track> *list=readSmallMetadata();
+   /*
    NodeLL<Track> *cancion=list->getFirst();
-
    while(cancion!=nullptr){
        Track *track=cancion->getData();
         add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
                  QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
         cancion=cancion->getNext();
-   }
-   //ArtistListRecursive(list);
+   }*/
+
    LinkedList<Track> *artistas= ArtistListRecursive(list);
    NodeLL<Track> *artista=artistas->getFirst();
 
@@ -130,4 +129,28 @@ void MainWindow::on_loadButton_clicked()
        artista=artista->getNext();
    }
 
+}
+
+void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
+{
+    ui->informacion->clear();
+    LinkedList<Track> *list=readSmallMetadata();
+    if (item->text(0)=="Todos"){
+        NodeLL<Track> *cancion=list->getFirst();
+        while(cancion!=nullptr){
+            Track *track=cancion->getData();
+             add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
+                      QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
+             cancion=cancion->getNext();
+        }
+    }
+
+     LinkedList<Track> *lista=readSmallArtist(item->text(0).toStdString(),list);
+     NodeLL<Track> *cancion=lista->getFirst();
+     while(cancion!=nullptr){
+         Track *track=cancion->getData();
+          add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
+                   QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
+          cancion=cancion->getNext();
+     }
 }
