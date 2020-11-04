@@ -49,9 +49,9 @@ void MainWindow::on_progress_changed(qint64 position)
     ui->progress->setValue(position);
 }
 
-void on_durationChenged(qint64 position)
+void MainWindow::on_durationChenged(qint64 position)
 {
-
+    ui->progress->setMaximum(position);
 }
 
 void MainWindow::play_song(QString ID){
