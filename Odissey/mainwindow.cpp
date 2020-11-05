@@ -7,13 +7,14 @@
 #include "../tracks.cpp"
 
 
-
+bool paginacion=false;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     player = new QMediaPlayer(this);
+
 
     connect(player, &QMediaPlayer::positionChanged,this, &MainWindow::on_progress_changed);
     connect(player,&QMediaPlayer::durationChanged,this,&MainWindow::on_durationChenged);
@@ -85,12 +86,6 @@ void MainWindow::on_progress_sliderMoved(int position)
 }
 
 
-void MainWindow::on_informacion_doubleClicked(const QModelIndex &index)
-{
-   // QMessageBox::critical(this,"0",QString::informacion(index));
-
-}
-
 void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {
 
@@ -101,20 +96,13 @@ void MainWindow::on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int col
 
 
 
+
 }
 
 void MainWindow::on_loadButton_clicked()
 {
    add_art("Todos");
    LinkedList<Track> *list=readSmallMetadata();
-   /*
-   NodeLL<Track> *cancion=list->getFirst();
-   while(cancion!=nullptr){
-       Track *track=cancion->getData();
-        add_song(QString::fromStdString(track->getTrackID()),QString::fromStdString(track->getTitle()),QString::fromStdString(track->getArtist()),
-                 QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
-        cancion=cancion->getNext();
-   }*/
 
    LinkedList<Track> *artistas= ArtistListRecursive(list);
    NodeLL<Track> *artista=artistas->getFirst();
@@ -149,4 +137,9 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
                    QString::fromStdString(track->getAlbum()),QString::fromStdString(track->getGenre()).remove(0,15),QString::fromStdString(track->getLenght()));
           cancion=cancion->getNext();
      }
+}
+
+void MainWindow::on_checkBox_stateChanged(int arg1) //arg es 0 si esta desmarcado y 2 si esta marcado
+{
+   paginacion=arg1==2;
 }

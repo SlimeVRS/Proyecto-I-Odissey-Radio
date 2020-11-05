@@ -35,8 +35,6 @@ private slots:
 
     void on_progress_changed(qint64 position);
 
-    void on_informacion_doubleClicked(const QModelIndex &index);
-
     void on_informacion_itemDoubleClicked(QTreeWidgetItem *item, int column);
 
     void on_durationChenged(qint64 position);
@@ -44,6 +42,8 @@ private slots:
     void on_loadButton_clicked();
 
     void on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_checkBox_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
